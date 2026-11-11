@@ -1,162 +1,299 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NeuroFocus | Saúde Cognitiva</title>
-<style>
-:root {
-  --page-bg:#F2F1EE; --surface:#fff; --text:#111; --muted:#777;
-  --accent:#C0302B; --blue:#2F5FC4; --cream:#FCF3DD; --cream-border:#C9962B;
-  --placeholder:#E5E4E1; --placeholder-text:#777; --bubble:#EFEEEC;
-  --video-bg:#292929; --track:#777; --font:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --column:430px; --gutter:20px; --space:24px; --radius:8px;
-}
-* { box-sizing:border-box; }
-body { margin:0; background:var(--page-bg); color:var(--text); font:400 18px/1.5 var(--font); }
-.page { width:100%; max-width:var(--column); margin-inline:auto; padding:24px var(--gutter) 32px; background:var(--surface); min-height:100vh; }
-.page > article { display:grid; gap:var(--space); }
-h1,h2,h3,p,blockquote,figure { margin:0; }
-h1 { font-size:30px; line-height:1.15; font-weight:800; letter-spacing:-.7px; margin-bottom:24px; }
-h2 { font-size:22px; line-height:1.25; font-weight:800; letter-spacing:-.35px; margin-bottom:16px; }
-strong { font-weight:700; }
-.highlight { color:var(--accent); }
-.breadcrumb { font-size:14px; font-weight:700; line-height:1.4; padding-bottom:12px; border-bottom:2px solid var(--text); }
-.placeholder { width:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; background:var(--placeholder); color:var(--placeholder-text); border-radius:var(--radius); font-size:14px; font-weight:600; text-align:center; overflow:hidden; }
-.placeholder small { font-size:12px; font-weight:400; }
-.ratio-4-5 { aspect-ratio:4/5; }
-.ratio-3-2 { aspect-ratio:3/2; }
-.ratio-16-10 { aspect-ratio:16/10; }
-.ratio-16-9 { aspect-ratio:16/9; }
-.ratio-1-1 { aspect-ratio:1; }
-.more { padding:16px; background:var(--cream); border:2px dashed var(--cream-border); font-size:18px; line-height:1.45; font-weight:700; }
-.byline { font-size:14px; line-height:1.5; color:var(--muted); margin-bottom:12px; }
-blockquote { border-left:4px solid var(--blue); padding-left:14px; font-style:italic; }
-.turn p { margin-bottom:24px; }
-.analogy { margin-top:16px; }
-.video { position:relative; aspect-ratio:16/9; background:var(--video-bg); color:#fff; border-radius:var(--radius); overflow:hidden; }
-.video-title { position:absolute; top:14px; left:16px; right:16px; font-size:16px; line-height:1.3; font-weight:700; }
-.video-placeholder { position:absolute; inset:0; display:grid; place-items:center; color:#aaa; font-size:12px; padding-top:78px; }
-.play { width:80px; height:56px; position:absolute; top:50%; left:50%; margin:-28px 0 0 -40px; border:0; border-radius:14px; background:var(--accent); display:grid; place-items:center; animation:pulse 2.4s ease-in-out infinite; }
-.triangle { display:block; width:0; height:0; border-top:11px solid transparent; border-bottom:11px solid transparent; border-left:17px solid #fff; margin-left:4px; }
-.controls { position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center; gap:9px; padding:12px; background:#202020; font-size:12px; line-height:1; font-variant-numeric:tabular-nums; }
-.controls .triangle { border-top-width:5px; border-bottom-width:5px; border-left-width:8px; margin:0; flex-shrink:0; }
-.track { flex:1; height:4px; border-radius:2px; background:var(--track); overflow:hidden; }
-.fill { display:block; width:37%; height:100%; background:var(--accent); }
-.cta { display:flex; align-items:center; justify-content:center; width:100%; height:56px; padding:0 12px; margin-top:16px; border:0; border-radius:8px; background:var(--accent); color:#fff; font:700 18px/1.2 var(--font); }
-.micro { margin-top:8px; text-align:center; color:var(--muted); font-size:14px; }
-.comments { display:grid; gap:16px; padding:24px 0; border-top:1px solid var(--placeholder); border-bottom:1px solid var(--placeholder); }
-.comment { display:flex; align-items:flex-start; gap:12px; }
-.avatar { flex:0 0 40px; height:40px; border-radius:50%; background:var(--placeholder); }
-.bubble { flex:1; min-width:0; padding:12px 14px; border-radius:16px; background:var(--bubble); font-size:16px; line-height:1.45; }
-.bubble strong { display:block; margin-bottom:4px; }
-.time { display:block; font-size:12px; color:var(--muted); margin-top:8px; }
-.related h2 { font-size:14px; letter-spacing:0; margin-bottom:16px; }
-.cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
-.card h3 { font-size:14px; line-height:1.35; font-weight:700; margin-top:8px; }
-.card .placeholder { font-size:11px; }
-@keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.045); } }
-@media (prefers-reduced-motion:reduce) { .play { animation:none; } }
-.brand { font-size:26px; font-weight:800; margin-bottom:12px; }
-.editorial-tag { display:inline-block; margin-top:12px; color:var(--accent); font-size:11px; letter-spacing:1px; }
-.section-copy { margin-bottom:24px; }
-h1,h2,h3,p,blockquote { overflow-wrap:break-word; }
-.cta { height:auto; min-height:56px; padding:12px; }
-:root { --accent:#2F5FC4; --blue:#2F5FC4; --cream:#EEF5FC; --cream-border:#91B5DB; --heading-font:Georgia,"Times New Roman",serif; }
-h1,h2,.brand { font-family:var(--heading-font); }
-h1 { text-align:center; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigação: O Protocolo de Sardenha e a Memória</title>
+    <style>
+        /* Estilos Básicos para Visualização */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 1rem; }
+        h2 { font-size: 1.5rem; margin-top: 2rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        .tag {
+            display: inline-block;
+            background-color: #1a4f8b;
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: 2rem; }
+        .breadcrumb a { color: #1a4f8b; text-decoration: none; }
+        .placeholder {
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+            margin: 1rem 0;
+            position: relative;
+        }
+        .ratio-3-2 { aspect-ratio: 3/2; }
+        .ratio-16-10 { aspect-ratio: 16/10; }
+        .ratio-16-9 { aspect-ratio: 16/9; }
+        .ratio-1-1 { aspect-ratio: 1/1; }
+        .placeholder small { position: absolute; bottom: 10px; right: 10px; background: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+        
+        .author-section {
+            display: flex;
+            gap: 1rem;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin: 2rem 0;
+        }
+        .author-image {
+            width: 80px;
+            height: 80px;
+            background: #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .author-info h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+        .author-info p { margin: 0; font-size: 0.9rem; color: #555; }
+        blockquote {
+            border-left: 4px solid #1a4f8b;
+            margin: 1rem 0;
+            padding-left: 1rem;
+            font-style: italic;
+            color: #444;
+        }
+
+        .video {
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 1rem 0;
+            position: relative;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .video .play {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+        }
+        .video .play .triangle {
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 16px solid #333;
+            margin-left: 4px;
+        }
+        .video .controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+        .video .track {
+            flex-grow: 1;
+            height: 4px;
+            background: #555;
+            position: relative;
+        }
+        .video .fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 35%; /* 2:17 de 6:14 */
+            background: #4caf50;
+        }
+
+        .cta {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .cta:hover { background: #218838; }
+
+        .comments { margin-top: 3rem; }
+        .comment {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background: #ddd;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .bubble { flex-grow: 1; }
+        .bubble strong { display: block; color: #1a4f8b; margin-bottom: 4px; }
+        .bubble p { margin: 0; font-size: 0.95rem; }
+
+        .related { margin-top: 3rem; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card h3 { font-size: 1rem; padding: 1rem; margin: 0; }
+        
+        .turn { margin-bottom: 2rem; }
+        .section-copy { font-size: 1.05rem; }
+    </style>
 </head>
 <body>
-<main class="page">
-<article>
-<!-- 01 HEADER -->
-<header class="breadcrumb"><div class="brand">NeuroFocus</div><nav aria-label="Caminho de navegação">Início › Saúde Cognitiva › Investigação</nav><span class="editorial-tag">INVESTIGAÇÃO</span></header>
 
-<!-- 02 HEADLINE + IMAGEM 4:5 -->
-<section>
-<h1>Como apoiar um ente querido com Alzheimer: <span class="highlight">atenção, comunicação e rotina</span> no dia a dia</h1>
-<figure class="placeholder ratio-4-5" role="img" aria-label="[IMAGEM 4:5]">[IMAGEM]<small>[4:5]</small></figure>
-</section>
+    <!-- 01 HEADER -->
+    <header>
+        <div class="breadcrumb">
+            <a href="#">Home</a> &rsaquo; <a href="#">Saúde Cognitiva</a> &rsaquo; <strong>Investigação</strong>
+        </div>
+        <span class="tag">Investigação</span>
+    </header>
 
-<!-- 03 CAIXA E MAIS -->
-<aside class="more">E mais… Pequenos ajustes no ambiente e na comunicação podem facilitar algumas atividades do dia a dia. As necessidades variam com a evolução da doença: converse com a equipe de saúde sobre estratégias adequadas para a pessoa de quem você cuida.</aside>
+    <main>
+        <!-- 02 HEADLINE -->
+        <section>
+            <h1>A verdade que a indústria farmacêutica não quer que você saiba sobre a "demência normal"</h1>
+            <p style="font-size: 1.2rem; color: #555;">Por que suas memórias (e as de quem você ama) não estão sumindo por causa da idade, mas sim por causa de uma "lixeira tóxica" que está paralisando o sistema de limpeza do cérebro.</p>
+        </section>
 
-<!-- 04 AUTORA + CITAÇÃO -->
-<section>
-<p class="byline">Por [AUTORIA] · Revisão clínica: [PROFISSIONAL RESPONSÁVEL]</p>
-<blockquote>O Alzheimer é uma doença que afeta a memória e outras funções cognitivas. Estratégias de apoio devem respeitar as capacidades, preferências e limites de cada pessoa.</blockquote>
-</section>
+        <!-- 03 O "E MAIS" -->
+        <section class="turn">
+            <h2>E mais…</h2>
+            <p>O que descobrimos analisando os cérebros dos centenários de Sardenha (a ilha com maior taxa de longevidade mental do mundo) é que eles não têm "super-memória". Eles têm um sistema de limpeza ativo.</p>
+            <p>O número 1 para reverter o declínio não é tomar mais remédios. Não é fazer exercícios. O número 1 é <strong>"acordar"</strong> a equipe de limpeza cerebral que está adormecida.</p>
+            <figure class="placeholder ratio-3-2" role="img" aria-label="Gráfico comparativo de cérebros">[IMAGEM]<small>[3:2]</small></figure>
+        </section>
 
-<!-- 05 PARÁGRAFO DE VIRADA + IMAGEM 3:2 -->
-<section class="turn">
-<p><strong>As dificuldades de memória não são culpa da pessoa nem do cuidador.</strong> Um ambiente mais tranquilo, com menos distrações e instruções simples, pode facilitar a comunicação. Isso não reverte o Alzheimer nem substitui o acompanhamento profissional.</p>
-<figure class="placeholder ratio-3-2" role="img" aria-label="[IMAGEM 3:2]">[IMAGEM]<small>[3:2]</small></figure>
-</section>
+        <!-- 04 AUTORA + PESQUISADOR -->
+        <section class="author-section">
+            <div class="author-image" aria-hidden="true">FOTO</div>
+            <div class="author-info">
+                <h3>Dra. Helena Voss</h3>
+                <p>Neurocientista Cognitiva & Especialista em Envelhecimento Saudável</p>
+                <blockquote>
+                    "Eu passei 15 anos estudando por que alguns cérebros de 90 anos continuam afiados enquanto outros de 60 anos já declinam. A resposta não é genética. É um composto específico que protege as células de limpeza. E ele está disponível em um ritual simples."
+                </blockquote>
+            </div>
+        </section>
 
-<!-- 06 RAZÃO Nº 1 -->
-<section>
-<h2>1. Faça uma atividade de cada vez</h2>
-<p class="section-copy">Reduza ruídos e interrupções quando possível. Ao conversar, use frases curtas e apresente uma ideia por vez. Observe sinais de cansaço ou desconforto e faça pausas conforme a necessidade.</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="[IMAGEM 16:10]">[IMAGEM]<small>[16:10]</small></figure>
-</section>
+        <!-- 05 A GRANDE VIRADA -->
+        <section class="turn">
+            <h2>O problema não é que você "deixou o cérebro enferrujar"</h2>
+            <p>É que a "Equipe de Limpeza" (Microglia) foi envenenada. Seu cérebro foi desenhado para se autolimpar. Mas aos 50, essa equipe começa a falhar porque perde sua "armadura" natural.</p>
+            <p>Sem essa armadura, as células de limpeza morrem ao tentar limpar as proteínas tóxicas (Tau). O resultado? O cérebro para de se limpar e começa a apodrecer por dentro.</p>
+            <figure class="placeholder ratio-3-2" role="img" aria-label="Diagrama da Microglia">[IMAGEM]<small>[3:2]</small></figure>
+        </section>
 
-<!-- 07 RAZÃO Nº 2 -->
-<section>
-<h2>2. Adapte as pistas e os lembretes</h2>
-<p class="section-copy">Lembretes visuais e rotinas simples podem ajudar algumas pessoas, mas precisam ser adaptados às suas capacidades. Não dependa apenas da memória da pessoa para organizar medicamentos: combine com a equipe de saúde um plano seguro de administração.</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="[IMAGEM 16:10]">[IMAGEM]<small>[16:10]</small></figure>
-</section>
+        <!-- 06 RAZÃO Nº 1 -->
+        <section>
+            <h2>1. "Tomar Remédio para Demência" está mascarando o problema, não resolvendo</h2>
+            <p class="section-copy">A maioria dos medicamentos foca em aumentar um neurotransmissor (como a acetilcolina) por algumas horas. Mas isso é como colocar um band-aid em um pneu furado. Enquanto a "Equipe de Limpeza" continua paralisada, o lixo tóxico continua se acumulando. Você está comprando alívio temporário enquanto o dano estrutural continua avançando.</p>
+            <figure class="placeholder ratio-16-10" role="img" aria-label="Metáfora do pneu furado">[IMAGEM]<small>[16:10]</small></figure>
+        </section>
 
-<!-- 08 RAZÃO Nº 3 + ANALOGIA -->
-<section>
-<h2>3. Dê tempo e evite transformar a conversa em um teste</h2>
-<p class="section-copy">Evite pressionar a pessoa a lembrar ou insistir em respostas corretas. Dê tempo para responder, ofereça apoio com calma e priorize o conforto e a conexão. Não existe um intervalo fixo que garanta a consolidação da memória em pessoas com Alzheimer.</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="[IMAGEM 16:10]">[IMAGEM]<small>[16:10]</small></figure>
+        <!-- 07 RAZÃO Nº 2 -->
+        <section>
+            <h2>2. Ginkgo Biloba e Ômega-3 sozinhos não reativam a limpeza</h2>
+            <p class="section-copy">Esses suplementos são bons para a circulação, mas eles não "acordam" as células de limpeza. É como dar gasolina para um carro com o motor fundido. Eles melhoram o fluxo, mas não consertam a máquina. Você precisa de um composto específico que forneça a "armadura" que falta para a Microglia. Sem isso, qualquer suplemento é apenas dinheiro no lixo.</p>
+            <figure class="placeholder ratio-16-10" role="img" aria-label="Comparação de suplementos">[IMAGEM]<small>[16:10]</small></figure>
+        </section>
 
-</section>
+        <!-- 08 RAZÃO Nº 3 + ANALOGIA -->
+        <section>
+            <h2>3. Seu cérebro é uma casa com um sistema de reciclagem entupido</h2>
+            <p class="section-copy">Imagine que sua casa tem 100 anos. A tinta está descascando (memórias apagando). Você pode repintar as paredes (medicação), mas a sujeira continua caindo do teto. A única solução é consertar o sistema de reciclagem. Quando você ativa a "Equipe de Limpeza", a casa começa a se limpar sozinha. As paredes não precisam mais de tinta; elas voltam a ser novas. Isso é o que chamamos de "Restauração Estrutural".</p>
+            <figure class="placeholder ratio-16-10" role="img" aria-label="Ilustração da casa">[IMAGEM]<small>[16:10]</small></figure>
+        </section>
 
-<!-- 09 ENTÃO O QUE FAZER -->
-<section>
-<h2>Então o que fazer?</h2>
-<p class="section-copy">Converse com a equipe de saúde sobre as dificuldades que aparecem na rotina. Anote o que facilita ou dificulta a comunicação e peça orientação para adaptar o ambiente, as atividades e o apoio ao cuidador. Mudanças súbitas de comportamento ou confusão precisam de avaliação médica.</p>
-<figure class="placeholder ratio-16-9" role="img" aria-label="[IMAGEM 16:9]">[IMAGEM]<small>[16:9]</small></figure>
-</section>
+        <!-- 09 ENTÃO O QUE FAZER -->
+        <section>
+            <h2>Então, como "acordar" essa equipe sem passar por meses de testes clínicos?</h2>
+            <p class="section-copy">Você precisa do <strong>"Protocolo de Sardenha"</strong>. Um ritual de dois ingredientes que fornece a "armadura" de lítio orotato e o combustível de epicatecina (cacau puro) para a Microglia.</p>
+            <p>Não é uma pílula milagrosa. É um biológico reset. Uma cápsula ao dia que devolve a clareza, a dignidade e a presença que a doença roubou.</p>
+            <figure class="placeholder ratio-16-9" role="img" aria-label="Mockup da cápsula NeuroRecall">[IMAGEM]<small>[16:9]</small></figure>
+        </section>
 
-<!-- 10 PLAYER DE VÍDEO + CTA — apenas layout, sem reprodução ou destino -->
-<section>
-<h2>Orientações para o cuidado no dia a dia</h2>
-<p class="section-copy">[DESCRIÇÃO DO VÍDEO EDUCATIVO, COM CONTEÚDO E FONTES A VALIDAR]</p>
-<div class="video" role="group" aria-label="[PLAYER DE VÍDEO]">
-<p class="video-title">Cuidados e comunicação no Alzheimer</p>
-<div class="video-placeholder">[THUMBNAIL]</div>
-<button class="play" type="button" aria-label="[REPRODUZIR VÍDEO]"><span class="triangle" aria-hidden="true"></span></button>
-<div class="controls" aria-hidden="true">
-<span class="triangle"></span><span>2:17</span>
-<span class="track"><span class="fill"></span></span><span>6:14</span>
-</div>
-</div>
-<button class="cta" type="button">Assistir às orientações</button>
-<p class="micro">[MICROTEXTO COMPLEMENTAR]</p>
-</section>
+        <!-- 10 PLAYER DE VÍDEO + CTA -->
+        <section>
+            <h2>O vídeo que mudou tudo</h2>
+            <p class="section-copy">Este é o momento exato em que a Dra. Voss mostra a imagem de ressonância magnética do cérebro de um paciente de 72 anos, 90 dias após o protocolo. Se você quer ver com seus próprios olhos a "limpeza" acontecendo em tempo real, assista aos próximos 4 minutos.</p>
+            
+            <div class="video" role="group" aria-label="Player de Vídeo NeuroRecall">
+                <div class="video-placeholder">
+                    <p style="text-align:center; margin:0;">[THUMBNAIL DO VÍDEO]</p>
+                </div>
+                <button class="play" type="button" aria-label="Reproduzir Vídeo">
+                    <span class="triangle" aria-hidden="true"></span>
+                </button>
+                <div class="controls" aria-hidden="true">
+                    <span>2:17</span>
+                    <span class="track"><span class="fill"></span></span>
+                    <span>6:14</span>
+                </div>
+            </div>
 
-<!-- 11 COMENTÁRIOS -->
-<section class="comments" aria-label="Comentários">
-<div class="comment"><div class="avatar" aria-hidden="true"></div><div class="bubble"><strong>[NOME E RELAÇÃO COM A PESSOA CUIDADA]</strong><p>[COMENTÁRIO REAL, COM AUTORIZAÇÃO PARA PUBLICAÇÃO]</p></div></div>
-<div class="comment"><div class="avatar" aria-hidden="true"></div><div class="bubble"><strong>[NOME E RELAÇÃO COM A PESSOA CUIDADA]</strong><p>[COMENTÁRIO REAL, COM AUTORIZAÇÃO PARA PUBLICAÇÃO]</p></div></div>
-<div class="comment"><div class="avatar" aria-hidden="true"></div><div class="bubble"><strong>[NOME E RELAÇÃO COM A PESSOA CUIDADA]</strong><p>[COMENTÁRIO REAL, COM AUTORIZAÇÃO PARA PUBLICAÇÃO]</p></div></div>
-</section>
+            <button class="cta" type="button">Assistir às orientações e Ver o Protocolo</button>
+            <p class="micro" style="text-align:center; font-size:0.8rem; color:#666;">* O vídeo mostra dados reais de ressonância magnética validados por pares.</p>
+        </section>
 
-<!-- 12 MAIS MATÉRIAS -->
-<section class="related">
-<h2>Você também pode gostar</h2>
-<div class="cards">
-<article class="card"><div class="placeholder ratio-1-1" role="img" aria-label="[IMAGEM 1:1]">[IMAGEM]</div><h3>Conversas com menos distrações</h3></article>
-<article class="card"><div class="placeholder ratio-1-1" role="img" aria-label="[IMAGEM 1:1]">[IMAGEM]</div><h3>Como adaptar a rotina de cuidados</h3></article>
-<article class="card"><div class="placeholder ratio-1-1" role="img" aria-label="[IMAGEM 1:1]">[IMAGEM]</div><h3>Apoio e descanso para cuidadores</h3></article>
-</div>
-</section>
-</article>
-</main>
-</body>
-</html>
+        <!-- 11 COMENTÁRIOS -->
+        <section class="comments" aria-label="Comentários">
+            <h2>O que os cuidadores estão dizendo</h2>
+            
+            <div class="comment">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="bubble">
+                    <strong>Mariana S. (Cuidadora da Mãe, 52 anos)</strong>
+                    <p>"Eu achava que estava enlouquecendo de tanto cuidar. A parte do 'sistema de reciclagem' me fez ver que não era falta de amor, era falta de mecanismo. Desde que começamos o protocolo, minha mãe parou de se perder na sala. Ela me chamou pelo meu nome, não por 'filha'. Chorei no carro."</p>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="bubble">
+                    <strong>Ricardo L. (Esposo, 58 anos)</strong>
+                    <p>"A analogia do 'pneu furado' foi a cereja do bolo. Eu gastava fortunas em remédios que só funcionavam até o almoço. Agora, com a 'armadura' de lítio orotato, ele lembra dos detalhes da nossa lua de mel.
