@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investigation: The Sardinia Protocol and Memory</title>
     <style>
-        /* Basic display styles */
+        /* Estilos Básicos para Visualização */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -30,22 +30,16 @@
         }
         .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: 2rem; }
         .breadcrumb a { color: #1a4f8b; text-decoration: none; }
-        .placeholder {
-            background: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-weight: bold;
+        .image-container {
             margin: 1rem 0;
-            position: relative;
+            text-align: center;
         }
-        .ratio-3-2 { aspect-ratio: 3/2; }
-        .ratio-16-10 { aspect-ratio: 16/10; }
-        .ratio-16-9 { aspect-ratio: 16/9; }
-        .ratio-1-1 { aspect-ratio: 1/1; }
-        .placeholder small { position: absolute; bottom: 10px; right: 10px; background: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
-        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
         .author-section {
             display: flex;
             gap: 1rem;
@@ -130,7 +124,7 @@
             left: 0;
             top: 0;
             height: 100%;
-            width: 35%; /* 2:17 of 6:14 */
+            width: 35%;
             background: #4caf50;
         }
 
@@ -147,6 +141,7 @@
             cursor: pointer;
             margin: 1rem 0;
             text-align: center;
+            text-decoration: none;
         }
         .cta:hover { background: #218838; }
 
@@ -169,105 +164,138 @@
         .bubble { flex-grow: 1; }
         .bubble strong { display: block; color: #1a4f8b; margin-bottom: 4px; }
         .bubble p { margin: 0; font-size: 0.95rem; }
-
-        .related { margin-top: 3rem; }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .card h3 { font-size: 1rem; padding: 1rem; margin: 0; }
-        
         .turn { margin-bottom: 2rem; }
         .section-copy { font-size: 1.05rem; }
     </style>
 </head>
 <body>
-<!-- 01 HEADER -->
-<header>
-<div class="breadcrumb"><a href="#">Home</a> &rsaquo; <a href="#">Cognitive Health</a> &rsaquo; <strong>Investigation</strong></div>
-<span class="tag">Investigation</span>
-</header>
-<main>
-<!-- 02 HEADLINE -->
-<section>
-<h1>The truth the pharmaceutical industry doesn't want you to know about "normal dementia"</h1>
-<p style="font-size:1.2rem;color:#555;">Why your memories (and those of the people you love) aren't disappearing because of age, but because of a "toxic trash heap" that is paralyzing the brain's cleaning system.</p>
-</section>
-<!-- 03 AND THERE'S MORE -->
-<section class="turn">
-<h2>And there's more…</h2>
-<p>What we discovered by analyzing the brains of Sardinia's centenarians (the island with the highest rate of mental longevity in the world) is that they don't have a "super-memory." They have an active cleaning system.</p>
-<p>The number one way to reverse decline isn't taking more medication. It isn't exercising. Number one is <strong>"waking up"</strong> the brain's dormant cleaning crew.</p>
-<figure class="placeholder ratio-3-2" role="img" aria-label="Brain comparison chart">[IMAGE]<small>[3:2]</small></figure>
-</section>
-<!-- 04 AUTHOR + RESEARCHER -->
-<section class="author-section">
-<div class="author-image" aria-hidden="true">PHOTO</div>
-<div class="author-info">
-<h3>Dr. Helena Voss</h3>
-<p>Cognitive Neuroscientist &amp; Healthy Aging Specialist</p>
-<blockquote>"I spent 15 years studying why some 90-year-old brains remain sharp while others are already declining at 60. The answer isn't genetics. It's a specific compound that protects the cleaning cells. And it's available through a simple ritual."</blockquote>
-</div>
-</section>
-<!-- 05 THE BIG SHIFT -->
-<section class="turn">
-<h2>The problem isn't that you "let your brain get rusty"</h2>
-<p>It's that the "Cleaning Crew" (Microglia) has been poisoned. Your brain was designed to clean itself. But at 50, this crew starts to fail because it loses its natural "armor."</p>
-<p>Without that armor, the cleaning cells die while trying to clear toxic proteins (Tau). The result? The brain stops cleaning itself and starts rotting from the inside.</p>
-<figure class="placeholder ratio-3-2" role="img" aria-label="Microglia diagram">[IMAGE]<small>[3:2]</small></figure>
-</section>
-<!-- 06 REASON NO. 1 -->
-<section>
-<h2>1. "Taking Dementia Medication" is masking the problem, not solving it</h2>
-<p class="section-copy">Most medications focus on increasing a neurotransmitter (such as acetylcholine) for a few hours. But that's like putting a bandage on a flat tire. While the "Cleaning Crew" remains paralyzed, toxic waste keeps building up. You're buying temporary relief while structural damage continues to advance.</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="Flat tire metaphor">[IMAGE]<small>[16:10]</small></figure>
-</section>
-<!-- 07 REASON NO. 2 -->
-<section>
-<h2>2. Ginkgo Biloba and Omega-3 alone don't reactivate cleaning</h2>
-<p class="section-copy">These supplements are good for circulation, but they don't "wake up" the cleaning cells. It's like putting gasoline in a car with a seized engine. They improve flow, but they don't fix the machine. You need a specific compound that provides the "armor" Microglia is missing. Without it, any supplement is just money down the drain.</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="Supplement comparison">[IMAGE]<small>[16:10]</small></figure>
-</section>
-<!-- 08 REASON NO. 3 + ANALOGY -->
-<section>
-<h2>3. Your brain is a house with a clogged recycling system</h2>
-<p class="section-copy">Imagine your house is 100 years old. The paint is peeling (memories fading). You can repaint the walls (medication), but dirt keeps falling from the ceiling. The only solution is to fix the recycling system. When you activate the "Cleaning Crew," the house starts cleaning itself. The walls no longer need paint; they become like new again. That's what we call "Structural Restoration."</p>
-<figure class="placeholder ratio-16-10" role="img" aria-label="House illustration">[IMAGE]<small>[16:10]</small></figure>
-</section>
-<!-- 09 WHAT SHOULD YOU DO? -->
-<section>
-<h2>So, how do you "wake up" this crew without going through months of clinical trials?</h2>
-<p class="section-copy">You need the <strong>"Sardinia Protocol."</strong> A two-ingredient ritual that provides the "armor" of lithium orotate and the fuel of epicatechin (pure cocoa) for Microglia.</p>
-<p>It isn't a miracle pill. It's a biological reset. One capsule a day that restores the clarity, dignity, and presence the disease took away.</p>
-<figure class="placeholder ratio-16-9" role="img" aria-label="NeuroRecall capsule mockup">[IMAGE]<small>[16:9]</small></figure>
-</section>
-<!-- 10 VIDEO PLAYER + CTA -->
-<section>
-<h2>The video that changed everything</h2>
-<p class="section-copy">This is the exact moment Dr. Voss shows an MRI scan of a 72-year-old patient's brain, 90 days after the protocol. If you want to see the "cleaning" happening in real time with your own eyes, watch the next 4 minutes.</p>
-<div class="video" role="group" aria-label="NeuroRecall Video Player">
-<div class="video-placeholder"><p style="text-align:center;margin:0;">[VIDEO THUMBNAIL]</p></div>
-<button class="play" type="button" aria-label="Play Video"><span class="triangle" aria-hidden="true"></span></button>
-<div class="controls" aria-hidden="true"><span>2:17</span><span class="track"><span class="fill"></span></span><span>6:14</span></div>
-</div>
-<button class="cta" type="button">Watch the Guidance and View the Protocol</button>
-<p class="micro" style="text-align:center;font-size:0.8rem;color:#666;">* The video shows real, peer-reviewed MRI data.</p>
-</section>
-<!-- 11 COMMENTS -->
-<section class="comments" aria-label="Comments">
-<h2>What caregivers are saying</h2>
-<div class="comment"><div class="avatar" aria-hidden="true"></div><div class="bubble">
-<strong>Mariana S. (Mother's Caregiver, 52)</strong>
-<p>"I thought I was losing my mind from all the caregiving. The part about the 'recycling system' made me realize it wasn't a lack of love, but a missing mechanism. Since we started the protocol, my mother has stopped getting lost in the living room. She called me by my name, not 'daughter.' I cried in the car."</p>
-</div></div>
-<div class="comment"><div class="avatar" aria-hidden="true"></div><div class="bubble">
-<strong>Ricardo L. (Husband, 58)</strong>
-<p>"The 'flat tire' analogy was the icing on the cake. I was spending a fortune on medications that only worked until lunchtime. Now, with the 'armor' of lithium orotate, he remembers the details of our honeymoon.</p>
-<!-- The source file ends mid-comment here. No missing testimonial text has been added. -->
-</div></div>
-</section>
-</main>
+
+    <!-- 01 HEADER -->
+    <header>
+        <div class="breadcrumb">
+            <a href="#">Home</a> &rsaquo; <a href="#">Cognitive Health</a> &rsaquo; <strong>Investigation</strong>
+        </div>
+        <span class="tag">Investigation</span>
+    </header>
+
+    <main>
+        <!-- 02 HEADLINE -->
+        <section>
+            <h1>The truth the pharmaceutical industry doesn't want you to know about "normal dementia"</h1>
+            <p style="font-size: 1.2rem; color: #555;">Why your memories (and those of the people you love) aren't disappearing because of age, but because of a "toxic trash heap" that is paralyzing the brain's cleaning system.</p>
+        </section>
+
+        <!-- 03 O "E MAIS…" (IMAGEM 1) -->
+        <section class="turn">
+            <h2>And there's more…</h2>
+            <p>What we discovered by analyzing the brains of Sardinia's centenarians (the island with the highest rate of mental longevity in the world) is that they don't have a "super-memory." They have an active cleaning system.</p>
+            <p>The number one way to reverse decline isn't taking more medication. It isn't exercising. Number one is <strong>"waking up"</strong> the brain's dormant cleaning crew.</p>
+            
+            <div class="image-container">
+                <img src="imagem1.jpg" alt="Comparison: The Brain's Cleaning System (Sardinia vs Decline)">
+            </div>
+        </section>
+
+        <!-- 04 AUTORA + PESQUISADOR -->
+        <section class="author-section">
+            <div class="author-image" aria-hidden="true">PHOTO</div>
+            <div class="author-info">
+                <h3>Dr. Helena Voss</h3>
+                <p>Cognitive Neuroscientist & Healthy Aging Specialist</p>
+                <blockquote>
+                    "I spent 15 years studying why some 90-year-old brains remain sharp while others are already declining at 60. The answer isn't genetics. It's a specific compound that protects the cleaning cells. And it's available through a simple ritual."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- 05 A GRANDE VIRADA (IMAGEM 2) -->
+        <section class="turn">
+            <h2>The problem isn't that you "let your brain get rusty"</h2>
+            <p>It's that the "Cleaning Crew" (Microglia) has been poisoned. Your brain was designed to clean itself. But at 50, this crew starts to fail because it loses its natural "armor."</p>
+            <p>Without that armor, the cleaning cells die while trying to clear toxic proteins (Tau). The result? The brain stops cleaning itself and starts rotting from the inside.</p>
+            
+            <div class="image-container">
+                <img src="imagem2.jpg" alt="The True Problem: Destroyed Armor and Toxic Accumulation">
+            </div>
+        </section>
+
+        <!-- 06 RAZÃO Nº 1 (IMAGEM 3) -->
+        <section>
+            <h2>1. "Taking Dementia Medication" is masking the problem, not solving it</h2>
+            <p class="section-copy">Most medications focus on increasing a neurotransmitter (such as acetylcholine) for a few hours. But that's like putting a bandage on a flat tire. While the "Cleaning Crew" remains paralyzed, toxic waste keeps building up. You're buying temporary relief while structural damage continues to advance.</p>
+            
+            <div class="image-container">
+                <img src="imagem3.jpg" alt="Why Conventional Treatments Fail: The Flat Tire Analogy">
+            </div>
+        </section>
+
+        <!-- 07 RAZÃO Nº 2 (IMAGEM 4) -->
+        <section>
+            <h2>2. Ginkgo Biloba and Omega-3 alone don't reactivate cleaning</h2>
+            <p class="section-copy">These supplements are good for circulation, but they don't "wake up" the cleaning cells. It's like putting gasoline in a car with a seized engine. They improve flow, but they don't fix the machine. You need a specific compound that provides the "armor" Microglia is missing. Without it, any supplement is just money down the drain.</p>
+            
+            <div class="image-container">
+                <img src="imagem4.jpg" alt="The Limits of Conventional Supplements: Circulation vs Repair">
+            </div>
+        </section>
+
+        <!-- 08 RAZÃO Nº 3 -->
+        <section>
+            <h2>3. Your brain is a house with a clogged recycling system</h2>
+            <p class="section-copy">Imagine your house is 100 years old. The paint is peeling (memories fading). You can repaint the walls (medication), but dirt keeps falling from the ceiling. The only solution is to fix the recycling system. When you activate the "Cleaning Crew," the house starts cleaning itself. The walls no longer need paint; they become like new again. That's what we call "Structural Restoration."</p>
+        </section>
+
+        <!-- 09 ENTÃO O QUE FAZER (IMAGEM 5) -->
+        <section>
+            <h2>So, how do you "wake up" this crew without going through months of clinical trials?</h2>
+            <p class="section-copy">You need the <strong>"Sardinia Protocol."</strong> A two-ingredient ritual that provides the "armor" of lithium orotate and the fuel of epicatechin (pure cocoa) for Microglia.</p>
+            <p>It isn't a miracle pill. It's a biological reset. One capsule a day that restores the clarity, dignity, and presence the disease took away.</p>
+            
+            <div class="image-container">
+                <img src="imagem5.jpg" alt="The Mechanism of Action: Waking Up the Cleaning Team">
+            </div>
+        </section>
+
+        <!-- 10 PLAYER DE VÍDEO + CTA -->
+        <section>
+            <h2>The video that changed everything</h2>
+            <p class="section-copy">This is the exact moment Dr. Voss shows an MRI scan of a 72-year-old patient's brain, 90 days after the protocol. If you want to see the "cleaning" happening in real time with your own eyes, watch the next 4 minutes.</p>
+            
+            <div class="video" role="group" aria-label="NeuroRecall Video Player">
+                <button class="play" type="button" aria-label="Play Video">
+                    <span class="triangle" aria-hidden="true"></span>
+                </button>
+                <div class="controls" aria-hidden="true">
+                    <span>2:17</span>
+                    <span class="track"><span class="fill"></span></span>
+                    <span>6:14</span>
+                </div>
+            </div>
+
+            <a href="#" class="cta">Watch the Guidance and View the Protocol</a>
+            <p class="micro" style="text-align:center; font-size:0.8rem; color:#666;">* The video shows real, peer-reviewed MRI data.</p>
+        </section>
+
+        <!-- 11 COMENTÁRIOS -->
+        <section class="comments" aria-label="Comments">
+            <h2>What caregivers are saying</h2>
+            
+            <div class="comment">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="bubble">
+                    <strong>Mariana S. (Mother's Caregiver, 52)</strong>
+                    <p>"I thought I was losing my mind from all the caregiving. The part about the 'recycling system' made me realize it wasn't a lack of love, but a missing mechanism. Since we started the protocol, my mother has stopped getting lost in the living room. She called me by my name, not 'daughter.' I cried in the car."</p>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="avatar" aria-hidden="true"></div>
+                <div class="bubble">
+                    <strong>Ricardo L. (Husband, 58)</strong>
+                    <p>"The 'flat tire' analogy was the icing on the cake. I was spending a fortune on medications that only worked until lunchtime. Now, with the 'armor' of lithium orotate, he remembers the details of our honeymoon."</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
