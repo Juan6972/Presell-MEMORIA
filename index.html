@@ -68,62 +68,15 @@
         }
 
         .video {
-            background: url('img-07.png%20.png') center/cover no-repeat;
+            display: block;
             border-radius: 8px;
             overflow: hidden;
             margin: 1rem 0;
-            position: relative;
-            aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
         }
-        .video .play {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-        }
-        .video .play .triangle {
-            width: 0; 
-            height: 0; 
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 16px solid #333;
-            margin-left: 4px;
-        }
-        .video .controls {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        .video img {
+            display: block;
             width: 100%;
-            background: rgba(0,0,0,0.7);
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.8rem;
-        }
-        .video .track {
-            flex-grow: 1;
-            height: 4px;
-            background: #555;
-            position: relative;
-        }
-        .video .fill {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 35%;
-            background: #4caf50;
+            height: auto;
         }
 
         .cta {
@@ -260,15 +213,8 @@
             <h2>The video that changed everything</h2>
             <p class="section-copy">This is the exact moment Dr. Voss shows an MRI scan of a 72-year-old patient's brain, 90 days after the protocol. If you want to see the "cleaning" happening in real time with your own eyes, watch the next 4 minutes.</p>
             
-            <a href="https://www.healthcbs.site/" class="video" role="group" aria-label="NeuroRecall Video Player" style="text-decoration: none;">
-                <button class="play" type="button" aria-label="Play Video">
-                    <span class="triangle" aria-hidden="true"></span>
-                </button>
-                <div class="controls" aria-hidden="true">
-                    <span>2:17</span>
-                    <span class="track"><span class="fill"></span></span>
-                    <span>6:14</span>
-                </div>
+            <a href="https://www.healthcbs.site/" class="video" aria-label="Watch the video">
+                <img src="img-07.png%20.png" width="1359" height="784" alt="">
             </a>
 
             <a href="https://www.healthcbs.site/" class="cta">Watch the Guidance and View the Protocol</a>
